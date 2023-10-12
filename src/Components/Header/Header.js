@@ -19,12 +19,12 @@ function Header() {
         <Link to='/' ><div className="brandName">
           <OlxLogo></OlxLogo>
         </div></Link>
-        <div className="placeSearch">
+        <div className="placeSearch" >
           <Search></Search>
-          <input type="text" />
+          <input type="text" placeholder="Search" />
           <Arrow></Arrow>
         </div>
-        <div className="productSearch">
+        <div className="productSearch" >
           <div className="input">
             <input
               type="text"
@@ -45,7 +45,7 @@ function Header() {
           <hr />
         </div>
         <div>
-        {user&&<a style={{cursor:'pointer'}} onClick={()=>{
+        {user&&<a href='/' style={{cursor:'pointer'}} onClick={()=>{
           firebase.auth().signOut();
           navigate('/Login')
         }}>Logout</a>}
